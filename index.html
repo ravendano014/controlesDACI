@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Proceso de Compras DACI</title>
+    <!-- GOOGLE FONT -->
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet" />
+    <!-- BOOTSTRAP 4 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- SCROOLL REVEAL JS LIBRARY CDN -->
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+
+  
+      .highlight:not(.djs-connection) .djs-visual > :nth-child(1) {
+        fill: skyblue !important; /* color elements as green */
+      }
+  
+      .highlight-overlay {
+        background-color: green; /* color elements as green */
+        opacity: 0.4;
+        pointer-events: none; /* no pointer events, allows clicking through onto the element */
+        border-radius: 10px;
+      }
+  
+      .hyellow:not(.djs-connection) .djs-visual > :nth-child(1) {
+        fill: lightyellow !important; /* color elements as green */
+      }
+  
+      .hyellow-overlay {
+        background-color: green; /* color elements as green */
+        opacity: 0.4;
+        pointer-events: none; /* no pointer events, allows clicking through onto the element */
+        border-radius: 10px;
+      }
+  
+      .hgreen:not(.djs-connection) .djs-visual > :nth-child(1) {
+        fill: lightgreen !important; /* color elements as green */
+      }
+  
+      .hgreen-overlay {
+        background-color: green; /* color elements as green */
+        opacity: 0.4;
+        pointer-events: none; /* no pointer events, allows clicking through onto the element */
+        border-radius: 10px;
+      }
+  
+      .hpink:not(.djs-connection) .djs-visual > :nth-child(1) {
+        fill: pink !important; /* color elements as green */
+      }
+  
+      .hpink-overlay {
+        background-color: green; /* color elements as green */
+        opacity: 0.4;
+        pointer-events: none; /* no pointer events, allows clicking through onto the element */
+        border-radius: 10px;
+      }
+  
+      .horange:not(.djs-connection) .djs-visual > :nth-child(1) {
+        fill: orange !important; /* color elements as green */
+      }
+  
+      .horange-overlay {
+        background-color: green; /* color elements as green */
+        opacity: 0.4;
+        pointer-events: none; /* no pointer events, allows clicking through onto the element */
+        border-radius: 10px;
+      }
+  
+  
+    </style>
+    
+  </head>
+  <body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <a class="navbar-brand" href="#">Proceso de Compras DACI</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-auto">
+          <a class="nav-item nav-link" href="#header">Home</a>
+          <a class="nav-item nav-link" href="#info-one">About</a>
+          <a class="nav-item nav-link" href="#contact">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- SECTION -->
+
+    <section id="testimonial">
+      <div class="container">
+        <p class="h2 mb-2">
+          <h2>Procesos Internos</h2>
+        <br>
+        <table width="100%" border="0" class="table">
+            <thead class="thead-dark">
+              <th>
+                  <th>Actividad</th>
+                  <th>Responsable</th>
+                  <th>Proceso</th>
+                  <th>bpmn</th>
+              </th>
+            </thead>
+            <tbody>
+              <tr>
+                  <td>LP</td>
+                  <td>Adquisición Modalidad Licitaciones</td>
+                  <td>Jefatura Licitaciones</td>
+                  <td>PRA-01</td>
+                  <td><a href="./bpmn/PRA-01.bpmn">Sub proceso Licitaciones</a></td>
+              </tr>
+              <tr>
+                <td>CD</td>
+                <td>Adquisición Modalidad Contratación Directa</td>
+                <td>Jefatura Licitaciones</td>
+                <td>PRA-01</td>
+                <td><a href="#">Sub proceso Contratación Directa</a></td>
+            </tr>
+              <tr>
+                <td>LG</td>
+                <td>Adquisición Modalidad Libre Gestión</td>
+                <td>Jefatura Libre Gestión</td>
+                <td>PRA-02</td>
+                <td><a href="./bpmn/PRA-02.bpmn">Sub proceso Libre Gestión</a></td>
+              </tr>
+              <tr>
+                <td>CO</td>
+                <td>Contratos</td>
+                <td>Jefatura Contratos</td>
+                <td>PRA-03</td>
+                <td><a href="./bpmn/PRA-03.bpmn">Sub proceso Contratos</a></td>
+              </tr>
+            </tbody>
+        </table>    
+
+        </p>
+      </div>
+    </section>
+
+    <section id="testimonial">
+        <div class="container">
+    <a href="https://dbdiagram.io/d/5f6ba8297da1ea736e2f1163">Entidades Intervinientes (Diagrama de Base de Datos)</a>  
+    <br><br>
+    <table width="100%" border="0" class="table">
+        <thead class="thead-dark">
+          <tr>
+              <th>Cod.</th>
+              <th>Entidad</th>
+              <th>Descripción</th>
+              <th>Procesos</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+              <td>T1</td>
+              <td>licitacion</td>
+              <td>Licitaciones</td>
+              <td>LP</td>
+          </tr>
+          <tr>
+            <td>T2</td>
+            <td>unidad</td>
+            <td>Unidades Organizativas</td>
+            <td>LP, LG</td>
+          </tr>
+          <tr>
+            <td>T3</td>
+            <td>usuario</td>
+            <td>Usuarios del Sistema</td>
+            <td>LP, LG, CO</td>
+          </tr>
+          <tr>
+            <td>T4</td>
+            <td>estado</td>
+            <td>Estados de Licitaciones</td>
+            <td>LP</td>
+          </tr>
+          <tr>
+            <td>T5</td>
+            <td>proveedor</td>
+            <td>Proveedores</td>
+            <td>LP, LG, CO</td>
+          </tr>
+          <tr>
+            <td>T6</td>
+            <td>observacion</td>
+            <td>Observaciones por semana del año</td>
+            <td>LP</td>
+          </tr>
+          <tr>
+            <td>T7</td>
+            <td>paac</td>
+            <td>Insumo PAAC</td>
+            <td>LP, LG</td>
+          </tr>
+          <tr>
+            <td>T8</td>
+            <td>libre_gestion</td>
+            <td>Libre Gestión</td>
+            <td>LG</td>
+          </tr>
+          <tr>
+            <td>T9</td>
+            <td>requirente</td>
+            <td>Usuarios Requirentes</td>
+            <td>LG</td>
+          </tr>
+          <tr>
+            <td>T10</td>
+            <td>orden_compra</td>
+            <td>Ordenes de Compra</td>
+            <td>LG</td>
+          </tr>
+          <tr>
+            <td>T11</td>
+            <td>contrato</td>
+            <td>Contratos</td>
+            <td>CO</td>
+          </tr>
+        </tbody>
+    </table>
+    <br>
+</div>
+</section>
+  <!-- required modeler styles -->
+  <link rel="stylesheet" href="https://unpkg.com/bpmn-js@6.3.2/dist/assets/diagram-js.css">
+  <link rel="stylesheet" href="https://unpkg.com/bpmn-js@6.3.2/dist/assets/bpmn-font/css/bpmn.css">
+
+  <!-- modeler distro -->
+  <script src="https://unpkg.com/bpmn-js@6.3.2/dist/bpmn-modeler.development.js"></script>
+
+  <!-- jquery (required for example only) -->
+  <script src="https://unpkg.com/jquery@3.3.1/dist/jquery.js"></script>
+    <section id="header"><br><br>
+        <div class="container mt-5">
+          <div class="row">
+            <div class="col-md-6 col-sm-6">
+    <h2>T1. licitacion</h2>
+    <div id="diagram1" style="height: 800px; width: 1200px;"></div>
+<hr>
+<span id="countdown">--</span> Ultima Actualización &nbsp;
+
+
+
+  <!-- app -->
+  <script>
+
+    var viewer1 = new BpmnJS({
+      container: '#diagram1',
+      bpmnRenderer: {
+        defaultFillColor: '#fff',
+        defaultStrokeColor: '#000'
+      }
+    });
+
+    function showDiagram1(diagramXML) {
+
+      viewer1.importXML(diagramXML, function() {
+
+        var overlays = viewer1.get('overlays'),
+            canvas = viewer1.get('canvas'),
+            elementRegistry = viewer1.get('elementRegistry'),
+            modeling = viewer1.get('modeling');
+
+      });
+    }
+
+    // load + show diagram
+    //$.get('https://raw.githubusercontent.com/ravendano014/controlesDACI/gh-pages/bpmn/PRA-01.bpmn', showDiagram, 'text');
+    $.get('bpmn/PRA-01.bpmn', showDiagram1, 'text');
+  </script>
+
+<br />
+</div>
+    <table style="border-collapse: collapse; width: 5041pt;" width="6721">
+        <thead class="thead-dark">
+            <tr style="height: 60.0pt;">
+            <th class="xl54" style="width: 67pt;" width="89">Tipo de Proceso</th>
+            <th class="xl54" style="width: 83pt;" width="110">C&Oacute;DIGO PROCESO</th>
+            <th class="xl55" style="width: 99pt;" width="132">Rubro</th>
+            <th class="xl56" style="width: 345pt;" width="460">Detalle</th>
+            <th class="xl57" style="width: 46pt;" width="61">No. PR. PAAC</th>
+            <th class="xl58" style="width: 172pt;" width="229">UNIDAD REQUIRENTE</th>
+            <th class="xl59" style="width: 83pt;" width="110">Ingreso Req.</th>
+            <th class="xl59" style="width: 83pt;" width="110">Req. Final</th>
+            <th class="xl59" style="width: 83pt;" width="110">Aprobaci&oacute;n de Fondos</th>
+            <th class="xl60" style="width: 83pt;" width="110">Bases de Licitaci&oacute;n / Concurso / Lineamientos CD</th>
+            <th class="xl60" style="width: 83pt;" width="110">Fecha env&iacute;o Bases a firma Sr Presidente</th>
+            <th class="xl59" style="width: 83pt;" width="110">Publicacion Aviso Convocatoria</th>
+            <th class="xl59" style="width: 83pt;" width="110">Publicaci&oacute;n COMPRASAL</th>
+            <th class="xl61" style="width: 83pt;" width="110">Desde</th>
+            <th class="xl61" style="width: 83pt;" width="110">Hasta</th>
+            <th class="xl62" style="width: 83pt;" width="110">Fecha Recepcion y Apertura Ofertas</th>
+            <th class="xl62" style="width: 67pt;" width="89">Jornada <br /> (AM / PM)</th>
+            <th class="xl54" style="width: 109pt;" width="145">T&eacute;cnico Licitaciones Responsable</th>
+            <th class="xl54" style="width: 135pt;" width="180">Designado Depto Asistencia Jur&iacute;dica</th>
+            <th class="xl54" style="width: 135pt;" width="180">Analista Financiero Designado</th>
+            <th class="xl64" style="width: 67pt;" width="89">01 01</th>
+            <th class="xl64" style="width: 67pt;" width="89">01 02</th>
+            <th class="xl64" style="width: 67pt;" width="89">01 03</th>
+            <th class="xl64" style="width: 67pt;" width="89">02 01</th>
+            <th class="xl64" style="width: 67pt;" width="89">03 01</th>
+            <th class="xl64" style="width: 67pt;" width="89">03 02</th>
+            <th class="xl64" style="width: 67pt;" width="89">05 01</th>
+            <th class="xl64" style="width: 67pt;" width="89">05 02</th>
+            <th class="xl64" style="width: 68pt;" width="91">04 01</th>
+            <th class="xl64" style="width: 105pt;" width="140">TOTAL VERIFICADO</th>
+            <th class="xl64" style="width: 133pt;" width="177">OBSERVACI&Oacute;N</th>
+            <th class="xl64" style="width: 161pt;" width="215">ESTADO</th>
+            <th class="xl65" style="width: 83pt;" width="110">LIMITE PLAZO DE ADJUDICACI&Oacute;N</th>
+            <th class="xl65" style="width: 83pt;" width="110">FECHA INFORME LEGAL FINAL</th>
+            <th class="xl65" style="width: 83pt;" width="110">FECHA INFORME FINANCIERO FINAL</th>
+            <th class="xl65" style="width: 83pt;" width="110">FECHA INFORME T&Eacute;CNICO FINAL</th>
+            <th class="xl66" style="width: 83pt;" width="110">FECHA ACTA RECOMENDACI&Oacute;N</th>
+            <th class="xl66" style="width: 83pt;" width="110">FECHA ENV&Iacute;O RESOLUCION A FIRMA SR PRESIDENTE</th>
+            <th class="xl66" style="width: 83pt;" width="110">FECHA DEVOLUCION RESOLUCION FIRMADA</th>
+            <th class="xl65" style="width: 92pt;" width="122">FECHA RESOLUCI&Oacute;N RESULTADO</th>
+            <th class="xl67" style="width: 83pt;" width="110">RESULTADO</th>
+            <th class="xl65" style="width: 83pt;" width="110">MONTO ADJUDICADO</th>
+            <th class="xl65" style="width: 83pt;" width="110">FECHA NOTIFICACI&Oacute;N</th>
+            <th class="xl68" style="width: 83pt;" width="110">FECHA AVISO RESULTADO</th>
+            <th class="xl69" style="width: 377pt;" width="502">NOMBRE O RAZ&Oacute;N SOCIAL DE ADJUDICADO(S)</th>
+            <th class="xl70" style="width: 129pt;" width="172">PLAZO TRANSC. DESDE APERTURA</th>
+            <th class="xl70" style="width: 89pt;" width="118">PLAZO ADJUDICADO</th>
+            <th class="xl70" style="width: 86pt;" width="114">CONTEO D&Iacute;AS</th>
+            <th class="xl70" style="width: 86pt;" width="114">MES DE NOTIFICACION</th>
+            <th class="xl70" style="width: 86pt;" width="114">A&Ntilde;O DE NOTIFICACION</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr style="height: 60.0pt;">
+        <td class="xl54" style="width: 67pt;" width="89">Enum: 'LP', 'CD', 'LG'</td>
+        <td class="xl54" style="width: 83pt;" width="110">Varchar: Ejemp.: LP 01/2020</td>
+        <td class="xl55" style="width: 99pt;" width="132">Enum:  'Activo Fijo', 'Eventos', 'Infraestructura', 'Poliza Seguro', 'Servicio', 'Suministro'</td>
+        <td class="xl56" style="width: 345pt;" width="460">Mediumtext</td>
+        <td class="xl57" style="width: 46pt;" width="61">ID: PAAC</td>
+        <td class="xl58" style="width: 172pt;" width="229">ID: Unidad Organizativa</td>
+        <td class="xl59" style="width: 83pt;" width="110">Date</td>
+        <td class="xl59" style="width: 83pt;" width="110">Date</td>
+        <td class="xl59" style="width: 83pt;" width="110">Date</td>
+        <td class="xl60" style="width: 83pt;" width="110">Date</td>
+        <td class="xl60" style="width: 83pt;" width="110">Date</td>
+        <td class="xl59" style="width: 83pt;" width="110">Date</td>
+        <td class="xl59" style="width: 83pt;" width="110">Date</td>
+        <td class="xl61" style="width: 83pt;" width="110">Date</td>
+        <td class="xl61" style="width: 83pt;" width="110">Date</td>
+        <td class="xl62" style="width: 83pt;" width="110">Date</td>
+        <td class="xl62" style="width: 67pt;" width="89">Enum: 'Mañana', 'Todo el día'</td>
+        <td class="xl54" style="width: 109pt;" width="145">ID: Usuarios del Sistema</td>
+        <td class="xl54" style="width: 135pt;" width="180">ID: Usuarios del Sistema</td>
+        <td class="xl54" style="width: 135pt;" width="180">ID: Usuarios del Sistema</td>
+        <td class="xl64" style="width: 67pt;" width="89">Float: </td>
+        <td class="xl64" style="width: 67pt;" width="89">Float: </td>
+        <td class="xl64" style="width: 67pt;" width="89">Float: </td>
+        <td class="xl64" style="width: 67pt;" width="89">Float: </td>
+        <td class="xl64" style="width: 67pt;" width="89">Float: </td>
+        <td class="xl64" style="width: 67pt;" width="89">Float: </td>
+        <td class="xl64" style="width: 67pt;" width="89">Float: </td>
+        <td class="xl64" style="width: 67pt;" width="89">Float: </td>
+        <td class="xl64" style="width: 68pt;" width="91">Float: </td>
+        <td class="xl64" style="width: 105pt;" width="140">Float: </td>
+        <td class="xl64" style="width: 133pt;" width="177">Mediumtext</td>
+        <td class="xl64" style="width: 161pt;" width="215">ID: Estados de Licitaciones</td>
+        <td class="xl65" style="width: 83pt;" width="110">Date</td>
+        <td class="xl65" style="width: 83pt;" width="110">Date</td>
+        <td class="xl65" style="width: 83pt;" width="110">Date</td>
+        <td class="xl65" style="width: 83pt;" width="110">Date</td>
+        <td class="xl66" style="width: 83pt;" width="110">Date</td>
+        <td class="xl66" style="width: 83pt;" width="110">Date</td>
+        <td class="xl66" style="width: 83pt;" width="110">Date</td>
+        <td class="xl65" style="width: 92pt;" width="122">Date</td>
+        <td class="xl67" style="width: 83pt;" width="110">Enum: 'Adjudicación Total', 'Adjudicación Parcial', 'Cierre', 'Sin Efecto', 'Suspendida'</td>
+        <td class="xl65" style="width: 83pt;" width="110">Int: </td>
+        <td class="xl65" style="width: 83pt;" width="110">Date</td>
+        <td class="xl68" style="width: 83pt;" width="110">Date</td>
+        <td class="xl69" style="width: 377pt;" width="502">ID: Proveedores</td>
+        <td class="xl70" style="width: 129pt;" width="172">Float: </td>
+        <td class="xl70" style="width: 89pt;" width="118">Float:</td>
+        <td class="xl70" style="width: 86pt;" width="114">Float</td>
+        <td class="xl70" style="width: 86pt;" width="114">Int</td>
+        <td class="xl70" style="width: 86pt;" width="114">Int</td>
+        </tr>
+        </tbody>
+        </table>
+
+        <br>
+        <h2>T8. libre_gestion</h2>
+        <div id="diagram2" style="height: 800px; width: 1200px;"></div>
+         <!-- app -->
+  <script>
+
+    var viewer2 = new BpmnJS({
+      container: '#diagram2',
+      bpmnRenderer: {
+        defaultFillColor: '#fff',
+        defaultStrokeColor: '#000'
+      }
+    });
+
+    function showDiagram2(diagramXML) {
+
+      viewer2.importXML(diagramXML, function() {
+
+        var overlays = viewer2.get('overlays'),
+            canvas = viewer2.get('canvas'),
+            elementRegistry = viewer2.get('elementRegistry'),
+            modeling = viewer2.get('modeling');
+
+      });
+    }
+
+    // load + show diagram
+    //$.get('https://raw.githubusercontent.com/ravendano014/controlesDACI/gh-pages/bpmn/PRA-01.bpmn', showDiagram, 'text');
+    $.get('bpmn/PRA-02.bpmn', showDiagram2, 'text');
+  </script>
+        <table width="4759">
+            <thead class="thead-dark">
+                <tr>
+                <th width="108">&nbsp;</th>
+                <th width="152">&nbsp;</th>
+                <th width="89">&nbsp;</th>
+                <th width="105">&nbsp;</th>
+                <th width="186">&nbsp;</th>
+                <th width="80">&nbsp;</th>
+                <th width="203">&nbsp;</th>
+                <th width="112">&nbsp;</th>
+                <th width="147">&nbsp;</th>
+                <th width="67">&nbsp;</th>
+                <th width="95">MONTOS</th>
+                <th width="95">&nbsp;</th>
+                <th width="80">&nbsp;</th>
+                <th width="91">&nbsp;</th>
+                <th width="117">&nbsp;</th>
+                <th width="101">&nbsp;</th>
+                <th width="95">&nbsp;</th>
+                <th width="94">&nbsp;</th>
+                <th width="99">&nbsp;</th>
+                <th width="118">&nbsp;</th>
+                <th width="120">&nbsp;</th>
+                <th width="120">&nbsp;</th>
+                <th width="120">&nbsp;</th>
+                <th width="120">&nbsp;</th>
+                <th width="106">&nbsp;</th>
+                <th width="197">&nbsp;</th>
+                <th width="91">&nbsp;</th>
+                <th width="100">&nbsp;</th>
+                <th width="146">&nbsp;</th>
+                <th width="124">&nbsp;</th>
+                <th width="139">&nbsp;</th>
+                <th width="146">&nbsp;</th>
+                <th width="146">&nbsp;</th>
+                <th width="146">&nbsp;</th>
+                <th width="116">&nbsp;</th>
+                <th width="112">&nbsp;</th>
+                <th width="112">&nbsp;</th>
+                <th width="112">&nbsp;</th>
+                <th width="126">&nbsp;</th>
+                <th width="126">&nbsp;</th>
+                </tr>
+                <tr>
+                <th width="108">Fecha de Presentaci&oacute;n DACI</th>
+                <th width="152">Fecha de Observaciones</th>
+                <th width="89">Fecha de Ingreso DACI</th>
+                <th width="105">Correlativo LG DACI</th>
+                <th width="186">Requirente</th>
+                <th width="80">No Proceso PAAC</th>
+                <th width="203">Concepto</th>
+                <th width="112">Gestor de Compra/ Secretaria</th>
+                <th width="147">Espec&iacute;ficos Presupuestarios</th>
+                <th width="67">P-V-A</th>
+                <th width="95">0101</th>
+                <th width="95">0102</th>
+                <th width="80">0103</th>
+                <th width="91">0201</th>
+                <th width="117">0301</th>
+                <th width="101">0302</th>
+                <th width="95">0401</th>
+                <th width="94">0501</th>
+                <th width="99">0502</th>
+                <th width="118">total</th>
+                <th width="120">Env&iacute;o de Verificaci&oacute;n Fondos</th>
+                <th width="120">Observaciones a Verificaci&oacute;n Fondos</th>
+                <th width="120">Reenv&iacute;o de Verificaci&oacute;n Fondos</th>
+                <th width="120">Aprobaci&oacute;n Fondos</th>
+                <th width="106">Instrumento</th>
+                <th width="197">Administrador de Orden de Compra</th>
+                <th width="91">No Acuerdo</th>
+                <th width="100">No Orden de Compra&nbsp;</th>
+                <th width="146">No Contrato</th>
+                <th width="124">No Compromiso</th>
+                <th width="139">Proveedor</th>
+                <th width="146">Ajuste/Modificaci&oacute;n PAAC</th>
+                <th width="146">Inicio Publicaci&oacute;n</th>
+                <th width="146">Fin Publicaci&oacute;n</th>
+                <th width="116">Solicitud de Informe</th>
+                <th width="112">Recepci&oacute;n de Informe</th>
+                <th width="112">Observaci&oacute;n de Informe</th>
+                <th width="112">Recepci&oacute;n de Informe Final</th>
+                <th width="126">Envio a Adjudicaci&oacute;n</th>
+                <th width="126">Observaciones a Adjudicaci&oacute;n</th>
+                </tr>
+                </thead>
+            <tbody>
+            <tr>
+            <td width="108">Date</td>
+            <td width="152">Date</td>
+            <td width="89">Date</td>
+            <td width="105">ID: Libre Gestión</td>
+            <td width="186">ID: Unidades Organizativas</td>
+            <td width="80">ID: PAAC</td>
+            <td width="203">Mediumtext</td>
+            <td width="112">ID: Usuarios del Sistema</td>
+            <td width="147">ID: Específicos Presupuestarios</td>
+            <td width="67">Enum: 'P', 'V', 'A'</td>
+            <td width="95">Float</td>
+            <td width="95">Float</td>
+            <td width="80">Float</td>
+            <td width="91">Float</td>
+            <td width="117">Float</td>
+            <td width="101">Float</td>
+            <td width="95">Float</td>
+            <td width="94">Float</td>
+            <td width="99">Float</td>
+            <td width="118">Float</td>
+            <td width="120">Date</td>
+            <td width="120">Date</td>
+            <td width="120">Date</td>
+            <td width="120">Date</td>
+            <td width="106">Varchar: 1</td>
+            <td width="197">ID: Requirentes</td>
+            <td width="91">Int</td>
+            <td width="100">ID: Ordenes de Compra</td>
+            <td width="146">Varchar</td>
+            <td width="124">Varchar</td>
+            <td width="139">ID: Proveedores</td>
+            <td width="146">Varchar</td>
+            <td width="146">Date</td>
+            <td width="146">Date</td>
+            <td width="116">Date</td>
+            <td width="112">Date</td>
+            <td width="112">Date</td>
+            <td width="112">Date</td>
+            <td width="126">Date</td>
+            <td width="126">Date</td>
+            </tr>
+            </tbody>
+            </table>
+        <br>
+        <h2>T11. contrato</h2>
+        <div id="diagram3" style="height: 800px; width: 1200px;"></div>
+         <!-- app -->
+  <script>
+
+    var viewer3 = new BpmnJS({
+      container: '#diagram3',
+      bpmnRenderer: {
+        defaultFillColor: '#fff',
+        defaultStrokeColor: '#000'
+      }
+    });
+
+    function showDiagram3(diagramXML) {
+
+      viewer3.importXML(diagramXML, function() {
+
+        var overlays = viewer3.get('overlays'),
+            canvas = viewer3.get('canvas'),
+            elementRegistry = viewer3.get('elementRegistry'),
+            modeling = viewer3.get('modeling');
+
+      });
+    }
+
+    // load + show diagram
+    //$.get('https://raw.githubusercontent.com/ravendano014/controlesDACI/gh-pages/bpmn/PRA-01.bpmn', showDiagram, 'text');
+    $.get('bpmn/PRA-03.bpmn', showDiagram3, 'text');
+  </script>
+        <table width="3288">
+            <thead class="thead-dark">
+                <tr>
+                <th width="68">MODALIDAD</th>
+                <th width="57">TIPO</th>
+                <th width="80">TCO LICITACIONES</th>
+                <th width="310">DESCRIPCI&Oacute;N</th>
+                <th width="21">N&deg;&nbsp; DE CTO</th>
+                <th width="96">NOMBRE O RAZ&Oacute;N SOCIAL</th>
+                <th width="98">&nbsp;MONTO ADJUDICADO&nbsp;</th>
+                <th width="81">&nbsp;GARANTIA&nbsp;</th>
+                <th width="33">%</th>
+                <th width="80">COLAB. RESP.</th>
+                <th width="207">ADMINISTRADORES DE DE CTO.</th>
+                <th width="207">DESCRIPCION DE LA O.B.S.</th>
+                <th width="81">FECHA NOTIFICACI&Oacute;N</th>
+                <th width="80">Fecha de Recurso</th>
+                <th width="80">Nombramiento Comisi&oacute;n de Alto Nivel</th>
+                <th width="80">Resoluci&oacute;n de Comisi&oacute;n de Alto Nivel</th>
+                <th width="80">Notificaci&oacute;n de Resoluci&oacute;n de Comisi&oacute;n de Alto Nivel</th>
+                <th width="81">FECHA DE FIRMEZA DE ADJUDICACION</th>
+                <th width="80">FECHA CONTRATO</th>
+                <th width="81">HORA DE CONTRATO</th>
+                <th width="80">FIRMA</th>
+                <th width="27">X</th>
+                <th width="80">FECHA DE ENV&Iacute;O A FIRMA</th>
+                <th width="80">FECHA DE OBSERVACION</th>
+                <th width="80">FECHA DE REENVIO</th>
+                <th width="80">FECHA DE RECEPCI&Oacute;N DE CONTRATO</th>
+                <th width="80">FECHA DE SOLICITUD DE COMPROMISO</th>
+                <th width="80">FECHA DE OBSERVACION&nbsp; DE COMPROMISO</th>
+                <th width="80">FECHA DE REENVIO DE COMPROMISO</th>
+                <th width="80"># DE COMPROMISO</th>
+                <th width="80">FECHA DE RECEPCION DE COMPROMISO</th>
+                <th width="80">&nbsp;FECHA DE COMPROMISO&nbsp;</th>
+                <th width="80">&nbsp;MONTO CONTRATADO&nbsp;</th>
+                <th width="80">SOLICITUD DE COPIAS&nbsp; DE CONTRATO</th>
+                <th width="80">RECEPCION DE COPIAS DE COPIAS DE CONTRATO</th>
+                <th width="80">ADMINISTRADOR DE CONTRATO</th>
+                <th width="80">PROVEEDOR</th>
+                </tr>
+                </thead>
+            <tbody>
+            <tr>
+            <td width="68">ID: Licitaciones</td>
+            <td width="57">Mediumtext</td>
+            <td width="80">ID: Usuarios del Sistema</td>
+            <td width="310">Mediumtext</td>
+            <td>Int</td>
+            <td width="96">ID: Proveedores</td>
+            <td width="98">Float</td>
+            <td width="81">Float</td>
+            <td width="33">Int</td>
+            <td width="80">ID: Usuarios del Sistema</td>
+            <td width="207">ID: Usuarios del Sistema</td>
+            <td width="207">Mediumtext</td>
+            <td width="81">Date</td>
+            <td>Date</td>
+            <td>Date</td>
+            <td>Date</td>
+            <td>Date</td>
+            <td>Date</td>
+            <td width="80">Date</td>
+            <td>Datetime</td>
+            <td>PRESIDENTE</td>
+            <td width="27">Float</td>
+            <td width="80">Date</td>
+            <td width="80">Date</td>
+            <td width="80">Date</td>
+            <td width="80">Date</td>
+            <td width="80">Date</td>
+            <td width="80">Date</td>
+            <td width="80">Date</td>
+            <td>Int</td>
+            <td width="80">Date</td>
+            <td width="80">Float</td>
+            <td width="80">Date</td>
+            <td width="80">Date</td>
+            <td width="80">Date</td>
+            <td width="80">ID: Usuarios del Sistema</td>
+            <td width="80">ID: Proveedores</td>
+            </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</section>
+
+<footer id="contact"><br><br>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <form class="card mt-4" style="margin-left: 150px;">
+            <div class="card-body">
+              Twitter
+              <button class="btn btn-outline-secondary btn-block" onclick="location.href='https://twitter.com/ronald_avendano?lang=es'">
+               @ronald_avendano
+              </button>
+              email
+              <button class="btn btn-outline-secondary btn-block" onclick="mailto:'ronald.avendano@oj.gob.sv'">
+                ronald.avendano@oj.gob.sv
+              </button>
+              github
+              <button class="btn btn-outline-secondary btn-block">
+                https://github.com/ravendano014
+              </button>
+              LinkedIn
+              <button class="btn btn-outline-secondary btn-block" onclick="location.href='https://sv.linkedin.com/in/ronald-avenda%C3%B1o-7313a510'">
+                Independent Professional 
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div class="col-md-6">
+          <form style="margin-left: 150px;">
+            <div>
+        <pre>
+          <code>
+            var viewer3 = new BpmnJS({
+                container: '#diagram3',
+                bpmnRenderer: {
+                  defaultFillColor: '#fff',
+                  defaultStrokeColor: '#000'
+                }
+              });
+          
+              function showDiagram3(diagramXML) {
+          
+                viewer3.importXML(diagramXML, function() {
+          
+                  var overlays = viewer3.get('overlays'),
+                      canvas = viewer3.get('canvas'),
+                      elementRegistry = viewer3.get('elementRegistry'),
+                      modeling = viewer3.get('modeling');
+          
+                });
+          </code>
+        </pre>
+        </form>
+        </div>
+      </div>
+
+
+      </div>
+
+    </div>
+  </footer>
+
+    <!-- SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <!-- SCROOLL REVEAL SCRIPT -->
+    <script>
+      window.sr = ScrollReveal();
+
+    sr.reveal('.navbar', {
+      duration: 2000,
+      origin: 'bottom'
+    });
+
+    sr.reveal('.header-content-left', {
+      duration: 2000,
+      origin: 'top',
+      distance: '300px'
+    });
+
+    sr.reveal('.header-content-right', {
+      duration: 2000,
+      origin: 'right',
+      distance: '300px'
+    });
+
+    sr.reveal('.header-btn', {
+      duration: 2000,
+      delay: 1000, 
+      origin: 'bottom'
+    });
+
+    sr.reveal('#testimonial div', {
+      duration: 2000,
+      origin: 'left',
+      distance: '300px',
+      viewFactor: 0.2
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+    </script>
+  </body>
+</html>
